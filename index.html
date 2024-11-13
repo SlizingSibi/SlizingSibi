@@ -19,6 +19,16 @@
       height: 100vh;
       flex-direction: column;
     }
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: auto;
+      object-fit: cover; /* Ensures the video covers the entire page */
+      z-index: -1; /* Ensures the video stays in the background */
+    }
+
 
     /* Container for the video */
     
@@ -64,6 +74,13 @@
   </style>
 </head>
 <body>
+  <!-- Background Video -->
+  <video class="background-video" autoplay muted loop>
+    <source src="videoplayback.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+    Your browser does not support the video tag.
+  </video>
 
   <h1><span style="color: red;">WARNING!!!!! </span><span style="color: orangered;">It's Cracking</span></h1>
   
