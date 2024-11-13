@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slizing Sibi</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://img.huffingtonpost.com/asset/55dde0c81400002e002e40df.jpeg?cache=o95ml0usvc&ops=1910_1000');
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    /* Container for the video */
+    
+
+    /* Styling the video element */
+    video {
+
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Heading and page title */
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Play/pause button styling (just as an example) */
+    .video-controls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .video-controls button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .video-controls button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1><span style="color: red;">WARNING!!!!! </span><span style="color: orangered;">It's Cracking</span></h1>
+  
+  <div>
+    <video id="videoPlayer" controls>
+      <source src="SLizing Sibi.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <div class="video-controls">
+    <button onclick="playVideo()">Play</button>
+    <button onclick="pauseVideo()">Pause</button>
+    <button onclick="restartVideo()">Restart</button>
+  </div>
+
+  <script>
+    // JavaScript to control video playback
+    const video = document.getElementById("videoPlayer");
+
+    function playVideo() {
+      video.play();
+    }
+
+    function pauseVideo() {
+      video.pause();
+    }
+
+    function restartVideo() {
+      video.currentTime = 0;  // Reset the video to the beginning
+      video.play();
+    }
+  </script>
+
+</body>
+</html>
